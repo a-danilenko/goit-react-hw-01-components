@@ -7,7 +7,7 @@ function StatisticsList({ title, stats }) {
       {title && <h2 className={s.title}>Upload stats</h2>}
 
       <ul className={s.statList}>
-        {stats.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage="0" }) => (
           <li key={id} className={s.listItem}>
             <span className={s.label}>{label}</span>
             <span className={s.percentage}>{percentage} %</span>
@@ -22,10 +22,10 @@ StatisticsList.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number,
     })
   ),
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number,
 };
 
 export default StatisticsList;
