@@ -13,14 +13,14 @@ const FriendListItem = (friends) => {
   );
 };
 
+FriendListItem.defaultProps = {
+  avatar: "что-то пошло не так"
+}
+
 FriendListItem.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired
 };
-
-FriendListItem.defaultProps = {
-  avatar: "что-то пошло не так"
-}
 
 export default FriendListItem;

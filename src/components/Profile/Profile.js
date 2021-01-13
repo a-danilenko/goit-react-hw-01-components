@@ -31,6 +31,10 @@ export default function Profile({ name, tag, location, avatar, stats }) {
   );
 }
 
+Profile.defaultProps = {
+  avatar: "ой :["
+}
+
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
@@ -43,6 +47,3 @@ Profile.propTypes = {
     })
 };
 
-Profile.defaultProps = {
-  avatar: "ой :["
-}
